@@ -43,4 +43,7 @@ public interface NewsDao {
     @Insert({"insert into",TABLE_NAME,"(",INSERT_FIELDS,") values(#{title},#{link},#{image},#{likeCount},#{commentCount},#{createdDate},#{userId})"})
     int addNews(News news);
 
+    @Delete({"delete from ",TABLE_NAME,"where id=#{id}"})
+    void deleteById(int id);
+
 }
