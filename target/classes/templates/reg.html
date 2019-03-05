@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Product Admin - Dashboard HTML Template</title>
+  <link th:href="@{~/css/my.css}" rel="stylesheet" type="text/css" />
+  <link th:href="@{~/css/fontawesome.min.css}" rel="stylesheet" type="text/css" />
+  <link th:href="@{~/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+  <link th:href="@{~/css/templatemo-style.css}" rel="stylesheet" type="text/css" />
+</head>
+
+  <body>
+
+    <div class="container tm-mt-big tm-mb-big">
+      <div class="row">
+        <div class="col-12 mx-auto tm-login-col">
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2 class="tm-block-title mb-4">Welcome to Dashboard, Login</h2>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <form action="" th:action="@{/regAction}" method="post" class="tm-login-form">
+                  <div class="form-group">
+                    <label for="username" >Username</label>
+                    <input name="name"  type="text" class="form-control validate" id="username" value="" />
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="password" >Password</label>
+                    <input name="password"  type="password" class="form-control validate" id="password" value=""/>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" value="" name="remeber"/>
+                      <span style="color: #ffffff;">是否记住注册信息</span>
+                    </label>
+                  </div>
+                  <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary btn-block text-uppercase">
+                      register
+                    </button>
+                  </div>
+                  <button class="mt-5 btn btn-primary btn-block text-uppercase">
+                    已有账号，去登录
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" th:src="@{~/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{~/js/bootstrap.min.js}"></script>
+  </body>
+</html>
